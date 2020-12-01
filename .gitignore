@@ -1,0 +1,12 @@
+__pycache__
+__version__.py
+.git
+.venv
+*.log
+*.pyc
+*~
+*local.py
+media
+.python-version
+.idea
+static/
