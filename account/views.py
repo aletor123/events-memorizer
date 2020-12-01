@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
@@ -8,4 +9,6 @@ def login(request):
 
 
 def start_page(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect('/events')
     return render(request, 'start_page.html')
