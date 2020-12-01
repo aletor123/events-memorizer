@@ -156,7 +156,7 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
 
 # login/logout urls
 
-LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_URL = 'logout'
-LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'account:login'
+LOGIN_REDIRECT_URL = 'events'
+LOGOUT_URL = 'account:logout'
+LOGOUT_REDIRECT_URL = 'account:login'
