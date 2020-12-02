@@ -161,7 +161,7 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
 LOGIN_URL = 'account:login'
 LOGIN_REDIRECT_URL = 'events:events_list'
 LOGOUT_URL = 'account:logout'
-LOGOUT_REDIRECT_URL = 'account:login'
+LOGOUT_REDIRECT_URL = 'account:home'
 
 # Easy map settings
 
