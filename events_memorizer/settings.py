@@ -35,9 +35,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'easy_maps',
     'social_django',
     'account',
     'event',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +162,12 @@ LOGIN_URL = 'account:login'
 LOGIN_REDIRECT_URL = 'events'
 LOGOUT_URL = 'account:logout'
 LOGOUT_REDIRECT_URL = 'account:login'
+
+# Easy map settings
+
+EASY_MAPS_GOOGLE_KEY = "AIzaSyAE00O6mlfmxeUs4IR5WHnIeP8E043VG5I"
+TEMPLATE_DEBUG = True
+
+# Crispyforms
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
