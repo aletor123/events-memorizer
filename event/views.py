@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 
 # Create your views here.
@@ -8,7 +9,7 @@ from .models import Event
 from .forms import EventForm
 
 
-class Events(FormMixin, ListView):
+class Events(LoginRequiredMixin, FormMixin, ListView):
     model = Event
     context_object_name = 'events'
     template_name = 'events.html'
