@@ -134,7 +134,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "events_memorizer/static"),
 ]
-print(STATICFILES_DIRS)
 
 MEDIA_URL = '/media/'
 
@@ -143,13 +142,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Social Auth Settings
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
-
+FACEBOOK_PROFILE_EXTRA_PARAMS = {'locale': 'ru_RU'}
 SOCIAL_AUTH_FACEBOOK_KEY = 579437396201218
 SOCIAL_AUTH_FACEBOOK_SECRET = '5e0f24c1b6cd096180b4956e45f4f7ce'
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['user_link']
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['user_link',]
 
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-  'fields': 'id, name, picture.type(large)'
+    'fields': 'name, picture.type(large)'
 }
 
 SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
