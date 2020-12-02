@@ -18,11 +18,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from account import urls as account_urls
+from event import urls as events_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('social-auth/', include('social_django.urls', namespace="social")),
     path('', include(account_urls, namespace='account')),
+    path('events/', include(events_urls, namespace='events')),
 ]
 
 if settings.DEBUG:
