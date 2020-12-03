@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "sslserver",
-    'easy_maps',
+    'mapbox_location_field',
     'social_django',
     'account',
     'event',
@@ -165,7 +165,7 @@ LOGOUT_REDIRECT_URL = 'account:home'
 
 # Easy map settings
 
-EASY_MAPS_GOOGLE_KEY = "AIzaSyAE00O6mlfmxeUs4IR5WHnIeP8E043VG5I"
+MAPBOX_KEY = "pk.eyJ1IjoiYWxldG9yMTIzIiwiYSI6ImNraTh1dzEzbDA5amQzMGw3ZHI5bm5wNjcifQ.pFdXbZFfZq521obMDLC5JA"
 TEMPLATE_DEBUG = True
 
 # Crispyforms
