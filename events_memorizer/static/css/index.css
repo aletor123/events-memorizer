@@ -1,0 +1,63 @@
+.btn a, .btn a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.events{
+  width: 100%;
+}
+
+.event{
+  height: 430px;
+  overflow: auto;
+  border: 1.3px solid #b1abab;
+  padding: 7px;
+  text-align: center;
+  transition: 0.3s all;
+
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 3px 3px 14px 0px rgba(144, 137, 137, 0.24), 0px 9px 27px -12px rgba(33, 31, 31, 0.1);
+}
+
+.event:hover {
+  box-shadow: 0px 9px 18px 0 rgba(19, 18, 18, 0.21);
+}
+
+.event .title{
+  height: 50px;
+  transition: all 0.6s ease 0s;
+  color: #174771;
+  font-size: 19px;
+  margin: 0 0 4px 0;
+  padding: 5px;
+}
+
+.event .place{
+  height: 50px;
+  color: #337AB7;
+}
+
+.event .description{
+  height: 300px;
+  color: black;
+  word-wrap: break-word;
+}
+
+.place:hover, .description:hover{
+  -webkit-transition: transform 0.5s ease-in-out;
+    transform: translateY(5px);
+}
+
+.new-event{
+  display: flex;
+}
+
+.event .btn {
+  font-family: Chandas, sans-serif;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
