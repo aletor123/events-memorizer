@@ -33,13 +33,20 @@
         </div>
     {% endif %}
     </div>
-    <form enctype="multipart/form-data" method="post">
-            {{ form.title|as_crispy_field }}
-            {{ form.place.label }}
-            {{ form.place }}
-            {{ form.description|as_crispy_field }}
-            {{ form.media }}
-            {% csrf_token %}
-            <button id="submit_add_event" type="submit" name="add_event" class="btn btn-primary">Add event</button>
-    </form>
+    <div id="form_div">
+        <form enctype="multipart/form-data" method="post">
+                {{ form.title|as_crispy_field }}
+                {{ form.place.label }}
+                <p id="place_error_p" class="text-primary">
+                    We cannot get geolocation using a map, sorry. You can simply enter the place yourself.
+                    Or try place mark again.
+                </p>
+                {{ form.place }}
+                {{ form.description|as_crispy_field }}
+                {{ form.media }}
+                {% csrf_token %}
+                <p id="button_inf_p" class="text-primary">Wait please, we are waiting for your event place</p>
+                <button id="submit_add_event" type="submit" name="add_event" class="btn btn-primary">Add event</button>
+        </form>
+    </div>
 {% endblock %}
