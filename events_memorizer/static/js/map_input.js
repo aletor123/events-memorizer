@@ -130,6 +130,8 @@ if (!mapboxgl.supported()) {
 
                 // Cant submit till the end of get request
                 $('#submit_add_event').attr("disabled", true);
+                $('#button_inf_p').css("display", "block");
+
                 $.get(url, function (data) {
                     try {
                         reverse_name = data.features[0].place_name;
@@ -142,11 +144,20 @@ if (!mapboxgl.supported()) {
                     input.val(reverse_name);
 
                     $(document).trigger("reverse-geocode", [id, reverse_name,]);
-                //    show place input if request fails
+
+                }).done(function (){
+                    //    hide place input and info text if request done
+                    $('#button_inf_p').css("display", "none");
+                    $('.js-mapbox-input-location-field').css("display", "none");
                 }).fail(function() {
-                    alert( "error" );
+                    //    show place input and info text if request fails
+                    $('#place_error_p').css("display", "block");
+                    $('.js-mapbox-input-location-field').css("display", "block");
+                    $('.js-mapbox-input-location-field').removeAttr("readonly");
                 }).always(function() {
+                    //    return the ability to click a button
                     $('#submit_add_event').attr("disabled", false);
+                    $('#button_inf_p').css("display", "none");
                 });
             });
         });
