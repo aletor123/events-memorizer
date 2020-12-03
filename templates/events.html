@@ -2,6 +2,8 @@
 {% load crispy_forms_tags %}
 {% block title %} Sign in {% endblock %}
 {% block content %}
+    {% load mapbox_location_field_tags %}
+    {% location_field_includes %}
     {% for ass in backends.associated %}
       {% if ass.provider == 'facebook' %}
       <div class="row justify-content-md-center">
@@ -33,8 +35,10 @@
     </div>
     <form enctype="multipart/form-data" method="post">
             {{ form.title|as_crispy_field }}
+            {{ form.place.label }}
             {{ form.place }}
             {{ form.description|as_crispy_field }}
+            {{ form.media }}
             {% csrf_token %}
             <button type="submit" name="add_event" class="btn btn-primary">Add event</button>
     </form>
