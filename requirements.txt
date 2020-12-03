@@ -4,3 +4,4 @@ pillow
 social-auth-app-django
 django-mapbox-location-field
 django-crispy-forms
+django-sslserver
