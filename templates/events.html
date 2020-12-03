@@ -29,7 +29,7 @@
     {% else %}
         <div class="col-md-12"><h2>У вас нет ни одного воспоминания</h2></div>
         <div class="col-md-12 justify-content-md-center">
-            <button type="submit" class="btn btn-primary">Добавить воспоминание</button>
+            <button id="add_new_event" type="submit" class="btn btn-primary">Добавить воспоминание</button>
         </div>
     {% endif %}
     </div>
@@ -40,6 +40,6 @@
             {{ form.description|as_crispy_field }}
             {{ form.media }}
             {% csrf_token %}
-            <button type="submit" name="add_event" class="btn btn-primary">Add event</button>
+            <button id="submit_add_event" type="submit" name="add_event" class="btn btn-primary">Add event</button>
     </form>
 {% endblock %}
