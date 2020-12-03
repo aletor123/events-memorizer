@@ -26,5 +26,9 @@ class Events(LoginRequiredMixin, FormMixin, ListView):
         else:
             return self.form_invalid(form)
 
+    def get_context_data(self, **kwargs):
+        self.object_list = self.get_queryset()
+        return super(Events, self).get_context_data(**kwargs)
+
     def get_queryset(self):
         return Event.objects.filter(owner=self.request.user)
