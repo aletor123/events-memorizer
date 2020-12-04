@@ -1,8 +1,8 @@
-django
-psycopg2-binary
-pillow
-social-auth-app-django
-django-mapbox-location-field
-django-crispy-forms
-django-sslserver
-factory_boy
+django~=3.1.4
+psycopg2-binary~=2.8.6
+pillow~=8.0.1
+social-auth-app-django~=4.0.0
+django-mapbox-location-field~=1.6.4
+django-crispy-forms~=1.10.0
+django-sslserver~=0.22
+factory_boy~=3.1.0
