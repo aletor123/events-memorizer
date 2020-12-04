@@ -39,3 +39,6 @@ jobs:
 
     - name: Run coverals
       run: coverage run manage.py test
+
+    after_succes:
+      - coverage
