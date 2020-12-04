@@ -38,4 +38,4 @@ jobs:
       run: python manage.py test
 
     - name: Run coverals
-        run: coverage run manage.py test
+      run: coverage run manage.py test
