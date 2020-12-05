@@ -5,5 +5,5 @@ Before start you need to install requirements.
 
 To start server use(otherwise, Facebook login will not work):
  ```
-  python manage.py runsslserver
+  python3 manage.py runsslserver --nostatic
  ```
