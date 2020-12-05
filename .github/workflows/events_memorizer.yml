@@ -35,7 +35,9 @@ jobs:
       run: python manage.py migrate
 
     - name: Run tests
-      run: python manage.py test
+      run: |
+        python manage.py collectstatic
+        python manage.py test
 
     - name: Run coverals
       env:
