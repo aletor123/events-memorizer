@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$f9aa=mw5jprqx%vi$g2(ffe@)q%x8k3)tjngh+_b_wwou$##n'
+SECRET_KEY = os.environ.get('SECRET_KEY', '$f9aa=mw5jprqx%vi$g2(ffe@)q%x8k3)tjngh+_b_wwou$##n')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -88,6 +88,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 if os.environ.get('GITHUB_WORKFLOW'):
     DATABASES = {
