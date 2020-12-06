@@ -37,6 +37,7 @@ class EventTest(TestCase):
     def test_create_new_event_ok(self):
         event_data = {
             'title': 'title_test',
+            'point': '92.85656693081211, 56.01433428426304',
             'place': 'place_test',
             'description': 'description_test',
         }
@@ -53,13 +54,23 @@ class EventTest(TestCase):
         with self.subTest("test_title"):
             event_data = {
                 'title': '',
+                'point': '92.85656693081211, 56.01433428426304',
                 'place': 'place_test',
                 'description': 'description_test',
             }
             self._test_form_err(event_data, 'title')
+        with self.subTest("test_point"):
+            event_data = {
+                'title': 'title_test',
+                'point': '',
+                'place': 'place_test',
+                'description': 'description_test',
+            }
+            self._test_form_err(event_data, 'point')
         with self.subTest("test_place"):
             event_data = {
                 'title': 'title_test',
+                'point': '92.85656693081211, 56.01433428426304',
                 'place': '',
                 'description': 'description_test',
             }
@@ -67,6 +78,7 @@ class EventTest(TestCase):
         with self.subTest("test_description"):
             event_data = {
                 'title': 'title_test',
+                'point': '92.85656693081211, 56.01433428426304',
                 'place': 'place_test',
                 'description': '',
             }
