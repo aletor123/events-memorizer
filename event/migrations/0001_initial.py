@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=100, verbose_name='Title')),
+                ('point', models.CharField(max_length=250, verbose_name='Point')),
                 ('place', models.CharField(max_length=250, verbose_name='Place')),
                 ('description', models.TextField(verbose_name='Description')),
                 ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='own_events', to=settings.AUTH_USER_MODEL, verbose_name='Owner')),
