@@ -1,4 +1,4 @@
-name: Python application
+name: Event-memorizer-mapbox
 on:
   push:
     branches:
