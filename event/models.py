@@ -28,6 +28,11 @@ class Event(models.Model):
         verbose_name=_('Title')
     )
 
+    point = models.CharField(
+        max_length=250,
+        verbose_name=_('Point'),
+    )
+
     place = models.CharField(
         max_length=250,
         verbose_name=_('Place'),
