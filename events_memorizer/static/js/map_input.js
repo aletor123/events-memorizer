@@ -64,6 +64,7 @@ if (!mapboxgl.supported()) {
 
         var geocoders = {};
         $(".js-mapbox-input-location-field").each(function () {
+            var placeInput = $("input[name='place']");
             var input = $(this);
             var id = input.attr("id");
             var map = new mapboxgl.Map({
@@ -141,7 +142,9 @@ if (!mapboxgl.supported()) {
                         reverse_name = "undefined address";
                     }
                     geocoder.setInput(reverse_name);
-                    input.val(reverse_name);
+
+                    // Set place to place input
+                    placeInput.val(reverse_name);
 
                     $(document).trigger("reverse-geocode", [id, reverse_name,]);
 
