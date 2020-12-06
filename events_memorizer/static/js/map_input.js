@@ -150,13 +150,12 @@ if (!mapboxgl.supported()) {
 
                 }).done(function (){
                     //    hide place input and info text if request done
-                    $('#button_inf_p').css("display", "none");
-                    $('.js-mapbox-input-location-field').css("display", "none");
+                    $('#place_error_p').css("display", "none");
+                    placeInput.css("display", "none");
                 }).fail(function() {
                     //    show place input and info text if request fails
                     $('#place_error_p').css("display", "block");
-                    $('.js-mapbox-input-location-field').css("display", "block");
-                    $('.js-mapbox-input-location-field').removeAttr("readonly");
+                    placeInput.css("display", "block");
                 }).always(function() {
                     //    return the ability to click a button
                     $('#submit_add_event').attr("disabled", false);
