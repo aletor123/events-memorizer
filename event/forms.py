@@ -7,10 +7,10 @@ from .widgets import MapWidget
 class EventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = ('title', 'place', 'description')
+        fields = ('title', 'point', 'place', 'description')
         widgets = {
-            'place': MapWidget(map_attrs={"center": [92.85656693081211, 56.01433428426304],}),
+            'point': MapWidget(map_attrs={"center": [92.85656693081211, 56.01433428426304], }),
         }
         labels = {
-            'place': "Choose event's place",
+            'point': "Choose event's place",
         }
