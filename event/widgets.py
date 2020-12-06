@@ -18,5 +18,6 @@ class MapWidget(MapInput):
         }
 
     def get_config_settings(self):
-        self.center_point = False
+        if self.center_point:
+            self.center_point = " " + self.center_point
         return super(MapWidget, self).get_config_settings()
