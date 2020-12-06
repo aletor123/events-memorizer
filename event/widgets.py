@@ -11,6 +11,7 @@ class MapWidget(MapInput):
          It expects coordinates in self.center_point, so in get_config_settings we have to set it to False.
 
     """
+
     class Media:
         js = ("js/map_input.js",)
         css = {
@@ -21,3 +22,11 @@ class MapWidget(MapInput):
         if self.center_point:
             self.center_point = " " + self.center_point
         return super(MapWidget, self).get_config_settings()
+
+
+class AdminMapWidget(MapWidget):
+    class Media:
+        js = ("js/map_input_admin.js",)
+        css = {
+            "all": ("mapbox_location_field/css/map_input.css",)
+        }
