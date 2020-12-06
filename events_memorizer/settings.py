@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '$f9aa=mw5jprqx%vi$g2(ffe@)q%x8k3)tjngh+_b_wwou$##n')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True)
+DEBUG = bool(os.environ.get('DEBUG', True))
 
 ALLOWED_HOSTS = ["*"]
 
