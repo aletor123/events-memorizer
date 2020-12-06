@@ -126,7 +126,7 @@ if (!mapboxgl.supported()) {
                 marker.setLngLat(e.lngLat)
                     .addTo(map);
 
-
+                input.val(translate_to_string(e.lngLat));
                 var url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + translate_to_string(e.lngLat) + ".json?access_token=" + mapboxgl.accessToken;
 
                 // Cant submit till the end of get request
