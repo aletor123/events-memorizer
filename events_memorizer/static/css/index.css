@@ -67,7 +67,7 @@
   width: 100%;
 }
 
-#form_div{
+#form_div, #place_image_div{
   visibility: hidden;
   position: fixed;
   z-index: 2;
