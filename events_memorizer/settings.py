@@ -165,10 +165,11 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 FACEBOOK_PROFILE_EXTRA_PARAMS = {'locale': 'ru_RU'}
 SOCIAL_AUTH_FACEBOOK_KEY = 579437396201218
 SOCIAL_AUTH_FACEBOOK_SECRET = '5e0f24c1b6cd096180b4956e45f4f7ce'
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['user_link',]
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', ]
 
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-    'fields': 'name, picture.type(large)'
+    'locale': 'ru_RU',
+    'fields': 'id, name, email, picture.type(large)'
 }
 
 SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
